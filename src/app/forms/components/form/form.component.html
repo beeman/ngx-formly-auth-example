@@ -1,0 +1,6 @@
+<form [formGroup]="form" novalidate (ngSubmit)="submit()">
+  <formly-form [model]="model" [fields]="fields" [form]="form" [options]="options">
+      <ng-content></ng-content>
+      <button type="submit" class="d-none" [disabled]="!form.valid">submit</button>
+  </formly-form>
+</form>

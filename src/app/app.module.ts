@@ -15,7 +15,7 @@ import { SampleDataModule } from './sample-data/sample-data.module'
     BrowserModule,
     HttpClientModule,
     SampleDataModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }),
     AppSharedModule,
   ],
   bootstrap: [AppComponent],

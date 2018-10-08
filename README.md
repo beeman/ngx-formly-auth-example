@@ -1,5 +1,24 @@
 # Formly Auth Demo
 
+
+In this example you can see how you can leverage Formly to create highly reusable authentication pages.
+
+The example consists of 3 pages, a `sign in`, `sign up` and `forgot password` page. 
+
+The form fields, submit buttons and the links to the other pages are all defined in a configuration file: `src/app/auth/auth.config.ts`.
+
+In `src/app/auth/auth.module.ts` in the configuration of the router it's all wired up. For each of the pages there is a route with a dynamic path, a resolver and a data object where we define the `pageId`.
+
+The resolver grabs the `pageId` and resolves the matching page from `auth.config.ts`. The component that's being rendered is `AuthIndexComponent` which takes the resolved page from the route data, and passes it in the `AuthPageComponent`. 
+
+The `AuthPageComponent` is responsible for rendering the ui, existing of a Bootstrap card with a title, the form, the buttons and the links.
+
+
+In case you have any questions, feel free to reach out on [Twitter](https://twitter.com/beeman_nl/) or book a session with me on [CodeMentor](https://www.codementor.io/beeman)!
+
+
+----
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server

@@ -12,7 +12,7 @@ import { AuthPageResolver } from './resolvers/auth-page.resolver'
   imports: [
     AppSharedModule,
     RouterModule.forChild([
-      { path: '', pathMatch: 'full', redirectTo: 'sign-in' },
+      { path: '', pathMatch: 'full', redirectTo: signInPath },
       {
         path: forgotPath,
         component: AuthIndexComponent,
